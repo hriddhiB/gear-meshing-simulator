@@ -1,16 +1,11 @@
 import streamlit as st
 import time
 
-from modules.gear_geometry import generate_gear, gear_ratio
-from modules.gear_plot import plot_gears
+from gear_geometry import generate_gear, gear_ratio
+from gear_plot import plot_gears
 
 
 st.set_page_config(page_title="Gear Meshing Simulator", layout="wide")
-
-
-# LOAD CSS
-with open("assets/style.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
 st.title("⚙ Spur Gear Meshing Learning Simulator")
@@ -87,5 +82,6 @@ while st.session_state.running:
     fig = plot_gears(x1,y1,teeth1_shapes,x2,y2,teeth2_shapes)
 
     plot_area.plotly_chart(fig,use_container_width=True)
+
 
     time.sleep(0.03)
