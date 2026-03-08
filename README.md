@@ -19,3 +19,6 @@ https://your-app-name.streamlit.app
 
 ## Educational Purpose
 Helps students understand gear meshing, gear ratio, and rotational motion in mechanical systems.
+
+Built by a Mechanical Engineering student exploring engineering simulations using Python.
+
